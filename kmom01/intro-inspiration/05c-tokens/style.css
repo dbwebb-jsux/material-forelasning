@@ -1,0 +1,88 @@
+:root {
+    --color-bg: #fff;
+    --color-text: #222;
+    --color-surface: #222;      /* header och footer */
+    --color-on-surface: #fff;
+    --color-muted: #ccc;        /* hero och cover */
+    --color-accent: #0a6cff;
+    --space: 1rem;
+    --font-body: system-ui, sans-serif; /* systemfont = inget nedladdat, hållbarhet */
+}
+
+.theme-dark {
+    --color-bg: #111;
+    --color-text: #eee;
+    --color-surface: #000;
+    --color-on-surface: #eee;
+    --color-muted: #333;
+    --color-accent: #ffb703;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;          /* sidan = en kolumn ... */
+    flex-direction: column; /* ... så att footern hamnar längst ned */
+    font-family: var(--font-body);
+    background: var(--color-bg);
+    color: var(--color-text);
+}
+
+header,
+footer {
+    background: var(--color-surface);
+    color: var(--color-on-surface);
+    padding: var(--space);
+}
+
+header {
+    display: flex;                  /* logga och meny på samma rad */
+    justify-content: space-between; /* längs raden */
+    align-items: center;            /* tvärs raden */
+    gap: var(--space);
+}
+
+header a {
+    color: inherit;
+    text-decoration: none;
+}
+
+header a:hover {
+    color: var(--color-accent);
+}
+
+nav {
+    display: flex; /* menyn = en rad länkar */
+    gap: var(--space);
+}
+
+.hero {
+    background: var(--color-muted); /* plats för bild */
+    aspect-ratio: 16 / 5;
+}
+
+.container {
+    flex: 1; /* main växer -> sticky footer */
+    padding: var(--space);
+}
+
+#product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+    gap: var(--space);
+}
+
+.product {
+    display: flex;
+    flex-direction: column; /* omslag över titel */
+    gap: .5rem;
+}
+
+.cover {
+    aspect-ratio: 1 / 1;
+    background: var(--color-muted); /* plats för omslag */
+}
+
+.product h3 {
+    margin: 0;
+}

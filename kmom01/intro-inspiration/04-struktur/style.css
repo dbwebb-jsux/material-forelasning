@@ -1,0 +1,50 @@
+/* Layoutens poäng: sidan är en kolumn (header, hero, main, footer).
+   Main växer (flex: 1) så footern hamnar längst ned även när innehållet är kort. */
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+
+header,
+footer {
+    background: #222;
+    color: #fff;
+    padding: 1rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+header a {
+    color: inherit;
+    margin-right: 1rem;
+    text-decoration: none;
+}
+
+.hero {
+    background: #888; /* plats för bild */
+    aspect-ratio: 16 / 5;
+}
+
+.container {
+    flex: 1;
+    padding: 1rem;
+}
+
+.product {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.cover {
+    width: 20%;
+    aspect-ratio: 1 / 1;
+    background: #ccc; /* plats för omslag */
+}

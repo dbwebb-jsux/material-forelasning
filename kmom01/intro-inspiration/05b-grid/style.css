@@ -1,0 +1,70 @@
+/*
+Samma sida som 05a med flex men nu ett "rutnät".
+Grid ger rader OCH kolumner: så många kolumner som ryms,
+minst 10rem breda. Inga media queries.
+Prova att dra i fönstrets bredd, se i DevTools -> Layout -> Grid overlay.
+(I 05a kunde sista raden bli bred när flexboxen växte items. Inte i grid.)
+*/
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;          /* sidan = en kolumn ... */
+    flex-direction: column; /* ... så att footern hamnar längst ned */
+    font-family: sans-serif;
+}
+
+header,
+footer {
+    background: #222;
+    color: #fff;
+    padding: 1rem;
+}
+
+header {
+    display: flex;                  /* logga och meny på samma rad */
+    justify-content: space-between; /* längs raden */
+    align-items: center;            /* tvärs raden */
+    gap: 1rem;
+}
+
+header a {
+    color: inherit;
+    text-decoration: none;
+}
+
+nav {
+    display: flex; /* menyn = en rad länkar */
+    gap: 1rem;
+}
+
+.hero {
+    background: #888; /* plats för bild */
+    aspect-ratio: 16 / 5;
+}
+
+.container {
+    flex: 1; /* main växer -> sticky footer */
+    padding: 1rem;
+}
+
+#product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+    gap: 1rem;
+}
+
+.product {
+    display: flex;
+    flex-direction: column; /* omslag över titel */
+    gap: .5rem;
+}
+
+.cover {
+    aspect-ratio: 1 / 1;
+    background: #ccc; /* plats för omslag */
+}
+
+.product h3 {
+    margin: 0;
+}

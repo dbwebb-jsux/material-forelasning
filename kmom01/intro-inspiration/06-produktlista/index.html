@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Punkt 6: produktlistan med JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#">Skivbutiken</a>
+        <nav>
+            <a href="#">Album</a>
+            <a href="#">Om oss</a>
+        </nav>
+    </header>
+
+    <div class="hero" role="img" aria-label="Banner med skivor"></div>
+
+    <main class="container">
+        <h1>Album</h1>
+        <!-- Tomt i HTML: JS fyller listan. -->
+        <div id="product-list"></div>
+    </main>
+
+    <footer>&copy; Skivbutiken</footer>
+
+    <script>
+        // js genererar html, css stylar. Samma .product/.cover som förut.
+        // I kursen kommer datan från fetch(); här en array så att filen
+        // kan öppnas direkt i webbläsaren (file://).
+        const albums = [
+            { title: "Album ett" },
+            { title: "Album två" },
+            { title: "Album tre" },
+            { title: "Album fyra" },
+            { title: "Album fem" },
+            { title: "Album sex" }
+        ];
+
+        const list = document.getElementById('product-list');
+
+        list.innerHTML = albums
+            .map((album) => `
+                <article class="product">
+                    <div class="cover"></div>
+                    <h3>${album.title}</h3>
+                </article>
+            `)
+            .join('');
+    </script>
+</body>
+</html>
