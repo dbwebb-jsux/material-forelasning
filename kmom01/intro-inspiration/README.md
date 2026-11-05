@@ -1,6 +1,7 @@
 # Sammanställning från tillfället 261104, jsux
 
 inspelingen finns här (tyvärr dålig ljudkvalité):
+https://www.youtube.com/watch?v=Qns7K_Gc-CU&list=PLVDGHjA5-1qY
 
 
 
