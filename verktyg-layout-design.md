@@ -2,8 +2,8 @@
   
    
 ## Färgpaletter:
-    - Coolors (tryck mellanslag för nytt förslag): https://coolors.co
-    - Realtime Colors (testa paletten på en riktig layout): https://www.realtimecolors.com
+    - Coolors: https://coolors.co
+    - Realtime Colors (testa palett på layout): https://www.realtimecolors.com
     - Adobe Color (färghjul med regler, bra för att förstå *varför*): https://color.adobe.com
     - Color Hunt (färdiga, trendiga paletter): https://colorhunt.co
     - Happy Hues (paletter i sammanhang): https://www.happyhues.co
