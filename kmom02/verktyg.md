@@ -48,5 +48,3 @@ WhatFontIs (identifiera typsnitt från en bild): https://www.whatfontis.com
 
 WebAIM kontrastkoll (hör till *analysen* i "Typsnitt och färg"): https://webaim.org/resources/contrastchecker/
 
-  
-- Flexbox Froggy https://flexboxfroggy.com, Grid Garden https://cssgridgarden.com
